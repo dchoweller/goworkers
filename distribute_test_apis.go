@@ -58,7 +58,6 @@ func executeTestAPI(host hostInfo, apiChannel chan testAPI, commandChannel chan 
  * Execute 'numAPI' test APIs in 'apis' on all 'numHosts' hosts in 'hosts'
  */
 func executeTestApis(apis []testAPI, hosts []hostInfo, numAPIs int, numHosts int) {
-	//var apiChannels = [numHosts]chan testAPI{}
 	apiChannels := make([]chan testAPI, numHosts)
 	commandChannels := make([]chan int, numHosts)
 
